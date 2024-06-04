@@ -1,0 +1,37 @@
+The database name is Pablops
+It have 4 collections:
+Address contains: 
+_id(default from Mongodb)
+streetAddress:string
+city: string
+disctrict: string
+country: string
+
+Customer contains:  
+_id(default from Mongodb), 
+customerID: string, 
+customer_name: string, 
+customer_phone_number :string, 
+customer_address_id:string (reference to _id of the Address collection, 
+customer_cart: Object (embedded type)
+	cartID: string,
+	customer_product_list Array contains productID: string (reference to productID of the Product collection),
+	total_price: double
+
+Product contains:
+_id (default from Mongodb),
+productID: string,
+name: string,
+categoryID: string,
+price: double,
+amount: int,
+product_description: string,
+sellerID: string (reference to sellerID of Seller collection)
+
+Seller contains:
+_id (default from Mongodb) 
+sellerID: string
+seller_name: string
+seller_address_id: string (reference to _id of the Address' collection)
+product_list Array contains productID: string (reference to productID of the Product collection),
+		

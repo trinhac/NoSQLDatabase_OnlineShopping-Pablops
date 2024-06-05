@@ -12,7 +12,7 @@ const sellerSchema = new mongoose.Schema({
     seller_display_name:{
         type: String,
         required: false,
-        default: seller_username
+        default: "Test"
     },
     seller_address_id:{
         type: mongoose.Schema.Types.ObjectId,

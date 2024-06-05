@@ -1,13 +1,18 @@
 const mongoose = require('mongoose')
 
 const sellerSchema = new mongoose.Schema({
-    sellerID :{
+    seller_username :{
         type: String,
         required: true,
     },
-    seller_name:{
+    seller_password: {
         type: String,
-        required: true,
+        required: true
+    },
+    seller_display_name:{
+        type: String,
+        required: false,
+        default: seller_username
     },
     seller_address_id:{
         type: mongoose.Schema.Types.ObjectId,

@@ -14,10 +14,11 @@ const getAllSeller = async (req, res) => {
 
 const createSeller = async (req, res) => {
     try {
-        const { sellerID, seller_name } = req.body;
+        const { seller_password, seller_username } = req.body;
         const newSeller = new Seller({
-            sellerID,
-            seller_name,
+            seller_password,
+            seller_username,
+            seller_display_name,    
         });
         await newSeller.save();
         res.status(201).json(newSeller);
@@ -27,27 +28,29 @@ const createSeller = async (req, res) => {
     }
 };
 
-const createAddressForSeller = async (req, res) => {
-    try {
-        const { sellerID, seller_address_id } = req.body;
-        const address = new Address({
-            _id: seller_address_id,
-            streetAddress,
-            city,
-            district,
-            country,
-        });
-        await address.save();
-        res.status(201).json(address);
-    } catch (error) {
-        console.log('Error creating address', error);
-        res.status(500).json({ error: 'Error creating address' });
-    }
-};
+// const createAddressForSeller = async (req, res) => {
+//     try {
+//         const { sellerID, seller_address_id } = req.body;
+//         const address = new Address({
+//             _id: seller_address_id,
+//             streetAddress,
+//             city,
+//             district,
+//             country,
+//         });
+//         await address.save();
+//         res.status(201).json(address);
+//     } catch (error) {
+//         console.log('Error creating address', error);
+//         res.status(500).json({ error: 'Error creating address' });
+//     }
+// };
+
+
 
 // Export all functions as an object
 module.exports = {
     getAllSeller,
     createSeller,
-    createAddressForSeller,
+    // createAddressForSeller,
 };

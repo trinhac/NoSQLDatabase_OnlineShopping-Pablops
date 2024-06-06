@@ -15,12 +15,12 @@ const sellerSchema = new mongoose.Schema({
         default: "Test"
     },
     seller_address_id:{
-        type: mongoose.Schema.Types.ObjectId,
+        type: [mongoose.Schema.Types.ObjectId],
         ref:'Address',
         required: false,
     },
     product_list:{
-        type:  mongoose.Schema.Types.ObjectId,
+        type:  [mongoose.Schema.Types.ObjectId],
         ref:'Product',
         required: false,
     },

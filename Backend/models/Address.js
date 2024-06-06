@@ -17,6 +17,11 @@ const addressSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  sellerId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref:'Seller',
+    required:true,
+  }
 },
   { collection: 'Address' });
 

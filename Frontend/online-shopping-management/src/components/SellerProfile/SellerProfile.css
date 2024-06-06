@@ -1,0 +1,46 @@
+/* SellerProfile.css */
+.seller-profile {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.seller-profile h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.seller-details, .address-details {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.seller-details p, .address-details p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.seller-details p strong, .address-details p strong {
+  color: #555;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}
+
+.address-card {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+}

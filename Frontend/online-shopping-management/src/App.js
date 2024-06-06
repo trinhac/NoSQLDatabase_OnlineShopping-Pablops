@@ -1,8 +1,9 @@
 // import './App.css'
-import Home from "./components/Home"
-import Login from "./components/Login"
-import Signup from "./components/Signup"
+import Home from "./components/Home/Home"
+import Login from "./components/Login/Login"
+import Signup from "./components/Signup/Signup"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SellerProfile from "./components/SellerProfile/SellerProfile";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Login/>}/>
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/home" element={<Home/>}/>
+          <Route path="/profile/:sellerUsername" element={<SellerProfile />} /> {/* Add route for SellerProfile */}
         </Routes>
       </Router>
     </div>
